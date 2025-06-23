@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传奇今生红石榴唇釉 - 一抹倾城，传奇绽放</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(180deg, #fdf2f8 0%, #fce7f3 50%, #fecaca 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: transparent;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(90deg, #dc2626 0%, #ec4899 100%);
+            color: white;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .crown-icon {
+            width: 24px;
+            height: 24px;
+            background: #fbbf24;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .badge {
+            background: #fbbf24;
+            color: #dc2626;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 32px 16px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+            color: #dc2626;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+
+        /* Product Showcase */
+        .product-showcase {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 24px;
+            margin: 0 16px 32px;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .product-image {
+            width: 192px;
+            height: 256px;
+            margin: 0 auto 16px;
+            background: linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::before {
+            content: "传奇今生";
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        .brand-logo {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(90deg, #dc2626 0%, #ec4899 100%);
+            border-radius: 50%;
+        }
+
+        .lipstick {
+            width: 24px;
+            height: 64px;
+            background: #dc2626;
+            border-radius: 50px;
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: background-color 0.5s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hot-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #dc2626;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .product-info h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .product-info .subtitle {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .current-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #dc2626;
+        }
+
+        .original-price {
+            font-size: 18px;
+            color: #9ca3af;
+            text-decoration: line-through;
+        }
+
+        .save-badge {
+            background: #fef2f2;
+            color: #dc2626;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .feature-tag {
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+        }
+
+        /* Product Selector */
+        .product-selector {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .selector-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .selector-dot.active {
+            background: #dc2626;
+            transform: scale(1.25);
+        }
+
+        /* Buttons */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #dc2626 0%, #ec4899 100%);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #b91c1c 0%, #db2777 100%);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid #fca5a5;
+            color: #dc2626;
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: #fef2f2;
+        }
+
+        /* Sections */
+        .section {
+            padding: 48px 16px;
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-gradient {
+            background: linear-gradient(90deg, #dc2626 0%, #ec4899 100%);
+            color: white;
+        }
+
+        .section-gray {
+            background: #f9fafb;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        /* Brand Story */
+        .brand-story {
+            background: linear-gradient(90deg, #fef2f2 0%, #fdf2f8 100%);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .brand-image {
+            width: 100%;
+            height: 128px;
+            background: linear-gradient(90deg, #fca5a5 0%, #f9a8d4 100%);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 24px;
+        }
+
+        .feature-content h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .feature-content p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Color Swatches */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .color-swatch {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 4px solid white;
+        }
+
+        .color-card h4 {
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .color-card p {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        /* Reviews */
+        .review-card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, #fca5a5 0%, #f9a8d4 100%);
+            flex-shrink: 0;
+        }
+
+        .review-info {
+            flex: 1;
+        }
+
+        .review-name {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .stat-item {
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Offer Section */
+        .offer-section {
+            background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+            color: white;
+        }
+
+        .offer-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .offer-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .offer-desc {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .offer-time {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .gift-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        /* Final CTA */
+        .cta-section {
+            background: white;
+        }
+
+        .gift-box {
+            background: #fef2f2;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .gift-title {
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .gift-list {
+            list-style: none;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .gift-list li {
+            margin-bottom: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 32px 16px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: #d1d5db;
+            margin-bottom: 8px;
+        }
+
+        .footer .copyright {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 20px;
+            }
+            
+            .product-showcase {
+                margin: 0 8px 16px;
+                padding: 16px;
+            }
+            
+            .section {
+                padding: 32px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="crown-icon">👑</div>
+                <span>传奇今生</span>
+            </div>
+            <div class="badge">限时特惠</div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero fade-in">
+            <h1>传奇今生红石榴唇釉</h1>
+            <p class="subtitle">一抹倾城，传奇绽放</p>
+
+            <!-- Product Showcase -->
+            <div class="product-showcase">
+                <div class="product-image">
+                    <div class="brand-logo"></div>
+                    <div class="lipstick" id="lipstick"></div>
+                    <div class="hot-badge">HOT</div>
+                </div>
+
+                <div class="product-info">
+                    <h3 id="product-name">红石榴唇釉</h3>
+                    <p class="subtitle" id="product-subtitle">经典热销款</p>
+
+                    <div class="price-section">
+                        <span class="current-price">¥168</span>
+                        <span class="original-price">¥268</span>
+                        <span class="save-badge">省¥100</span>
+                    </div>
+
+                    <div class="features" id="features">
+                        <span class="feature-tag">12小时持久</span>
+                        <span class="feature-tag">滋润不干</span>
+                        <span class="feature-tag">显白提气色</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Selector -->
+            <div class="product-selector">
+                <div class="selector-dot active" data-product="0"></div>
+                <div class="selector-dot" data-product="1"></div>
+                <div class="selector-dot" data-product="2"></div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div style="padding: 0 16px;">
+                <button class="btn btn-primary" onclick="handlePurchase()">
+                    🛒 立即抢购 限时特价¥168
+                </button>
+                <button class="btn btn-outline" onclick="handleVideo()">
+                    ▶️ 观看试色视频
+                </button>
+            </div>
+        </section>
+
+        <!-- Brand Story -->
+        <section class="section section-white">
+            <h2>传奇今生品牌故事</h2>
+            <div class="brand-story">
+                <div class="brand-image">品牌形象</div>
+                <p>传奇今生，源自对美的执着追求。我们相信每一位女性都有属于自己的传奇故事，而我们的使命就是用最优质的产品，帮助每一位女性绽放属于自己的美丽传奇。</p>
+            </div>
+        </section>
+
+        <!-- Product Features -->
+        <section class="section section-gradient">
+            <h2>为什么选择传奇今生？</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <div class="feature-content">
+                        <h3>12小时持久不脱色</h3>
+                        <p>独特锁色配方，从早到晚保持完美妆容，无需频繁补妆</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">❤️</div>
+                    <div class="feature-content">
+                        <h3>红石榴精华滋养</h3>
+                        <p>天然红石榴提取物，深层滋润双唇，越用越水润</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🏆</div>
+                    <div class="feature-content">
+                        <h3>国际品质认证</h3>
+                        <p>通过多项国际安全认证，孕妇可用，安全无忧</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Swatches -->
+        <section class="section section-white">
+            <h2>热门色号推荐</h2>
+            <div class="color-grid">
+                <div class="color-card" onclick="selectColor('#C41E3A')">
+                    <div class="color-swatch" style="background-color: #C41E3A;"></div>
+                    <h4>01 红石榴</h4>
+                    <p>经典正红，气场全开</p>
+                </div>
+                <div class="color-card" onclick="selectColor('#E91E63')">
+                    <div class="color-swatch" style="background-color: #E91E63;"></div>
+                    <h4>02 玫瑰花语</h4>
+                    <p>温柔粉调，日常百搭</p>
+                </div>
+                <div class="color-card" onclick="selectColor('#FF6B6B')">
+                    <div class="color-swatch" style="background-color: #FF6B6B;"></div>
+                    <h4>03 蜜桃乌龙</h4>
+                    <p>活力橘调，青春洋溢</p>
+                </div>
+                <div class="color-card" onclick="selectColor('#8E24AA')">
+                    <div class="color-swatch" style="background-color: #8E24AA;"></div>
+                    <h4>04 浆果慕斯</h4>
+                    <p>神秘紫调，个性十足</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Reviews -->
+        <section class="section section-gray">
+            <h2>真实用户评价</h2>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar"></div>
+                    <div class="review-info">
+                        <div class="review-name">小仙女***</div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">颜色超级正，涂上去显白又有气质，持久度也很棒！已经回购第三支了</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar"></div>
+                    <div class="review-info">
+                        <div class="review-name">美妆达人***</div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">质地很好，不会拔干，颜色饱和度高，拍照超级上镜，强烈推荐！</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar"></div>
+                    <div class="review-info">
+                        <div class="review-name">职场丽人***</div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">上班族必备！早上涂一次能保持一整天，开会喝水都不掉色</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Limited Offer -->
+        <section class="section offer-section">
+            <div style="text-align: center;">
+                <div class="gift-icon">🎁</div>
+                <h2>限时特惠活动</h2>
+                <div class="offer-card">
+                    <div class="offer-title">买2送1</div>
+                    <div class="offer-desc">任选3支唇釉，只需付2支的钱</div>
+                    <div class="offer-time">活动时间：限今日24:00前</div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">500万+</div>
+                        <div class="stat-label">用户选择</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.2%</div>
+                        <div class="stat-label">好评率</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">闪电发货</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section cta-section">
+            <h2>现在下单，享受专属优惠</h2>
+            <div class="gift-box">
+                <div class="gift-title">🎁 新用户专享礼包</div>
+                <ul class="gift-list">
+                    <li>✓ 首单立减50元</li>
+                    <li>✓ 免费获得精美化妆包</li>
+                    <li>✓ 7天无理由退换货</li>
+                    <li>✓ 全国包邮到家</li>
+                </ul>
+            </div>
+
+            <div style="padding: 0 16px;">
+                <button class="btn btn-primary" onclick="handlePurchase()">
+                    🛒 立即抢购 ¥168 (原价¥268)
+                </button>
+                <button class="btn btn-outline" onclick="handleContact()">
+                    👥 咨询客服 获取更多优惠
+                </button>
+            </div>
+
+            <p style="text-align: center; font-size: 12px; color: #6b7280; margin-top: 16px;">
+                客服微信：cqjs2024 | 客服电话：400-888-9999
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo">
+                <div class="crown-icon">👑</div>
+                <span>传奇今生</span>
+            </div>
+            <p>让每一位女性都能绽放属于自己的美丽传奇</p>
+            <p class="copyright">© 2024 传奇今生 版权所有</p>
+        </footer>
+    </div>
+
+    <script>
+        // 产品数据
+        const products = [
+            {
+                name: "红石榴唇釉",
+                subtitle: "经典热销款",
+                color: "#C41E3A",
+                features: ["12小时持久", "滋润不干", "显白提气色"]
+            },
+            {
+                name: "玫瑰花语唇釉",
+                subtitle: "温柔日常款",
+                color: "#E91E63",
+                features: ["自然显色", "水润质地", "日常百搭"]
+            },
+            {
+                name: "蜜桃乌龙唇釉",
+                subtitle: "清新活力款",
+                color: "#FF6B6B",
+                features: ["元气满满", "少女感十足", "提亮肤色"]
+            }
+        ];
+
+        let currentProduct = 0;
+
+        // 更新产品显示
+        function updateProduct(index) {
+            const product = products[index];
+            
+            // 更新产品信息
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-subtitle').textContent = product.subtitle;
+            
+            // 更新唇釉颜色
+            document.getElementById('lipstick').style.backgroundColor = product.color;
+            
+            // 更新特性标签
+            const featuresContainer = document.getElementById('features');
+            featuresContainer.innerHTML = '';
+            product.features.forEach(feature => {
+                const tag = document.createElement('span');
+                tag.className = 'feature-tag';
+                tag.textContent = feature;
+                featuresContainer.appendChild(tag);
+            });
+            
+            // 更新选择器
+            document.querySelectorAll('.selector-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        // 自动轮播
+        function startAutoPlay() {
+            setInterval(() => {
+                currentProduct = (currentProduct + 1) % products.length;
+                updateProduct(currentProduct);
+            }, 4000);
+        }
+
+        // 点击选择器
+        document.querySelectorAll('.selector-dot').forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentProduct = index;
+                updateProduct(currentProduct);
+            });
+        });
+
+        // 选择颜色
+        function selectColor(color) {
+            document.getElementById('lipstick').style.backgroundColor = color;
+        }
+
+        // 按钮事件
+        function handlePurchase() {
+            alert('正在跳转到购买页面...\n\n您选择的产品：' + products[currentProduct].name + '\n价格：¥168');
+        }
+
+        function handleVideo() {
+            alert('正在打开试色视频...');
+        }
+
+        function handleContact() {
+            alert('客服联系方式：\n\n微信：cqjs2024\n电话：400-888-9999\n\n工作时间：9:00-21:00');
+        }
+
+        // 页面加载完成后启动
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProduct(0);
+            startAutoPlay();
+        });
+
+        // 色卡点击动画
+        document.querySelectorAll('.color-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    card.style.transform = 'translateY(-4px)';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
